@@ -1,9 +1,41 @@
-<button id="sbbtn" sound="1">GET OUT</button>
-<script>
-const button = document.getElementById('sbbtn');
-if (button) { button.addEventListener('click', (event) => { 
-    const id = event.currentTarget.getAttribute('sound'); 
-    new Audio(`/sounds/${id}.mp3`).play(); 
-  });
-}
+<html>
+  <head>
+    <style>
+      body {
+        background: #efefef;
+        color: #000;
+        font-family: Arial, Verdana, Roboto, sans-serif;
+        margin: 0px;
+      }
+
+      .nav-bar {
+        background: #fff;
+        height: 30px;
+        position: sticky;
+        align-content: center;
+        padding: 5px 30px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1000;
+      }
+
+      ped {
+        padding: 50px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar"><strong> USB </strong></div>
+    <ped>
+      <button id="sbbtn" sound="1">GET OUT</button>
+      <script>
+    const button = document.getElementById('sbbtn');
+    if (button) { button.addEventListener('click', (event) => { 
+        const id = event.currentTarget.getAttribute('sound'); 
+        new Audio(`/sounds/${id}.mp3`).play(); 
+      });
+    }
 </script>
+  </body>
+</html>
