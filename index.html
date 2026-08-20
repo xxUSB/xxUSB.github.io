@@ -21,21 +21,22 @@
       }
 
       ped {
-        padding: 50px 0px;
+        display: block;
+        padding: 20px 0px;
       }
     </style>
   </head>
   <body>
     <div class="nav-bar"><strong> USB </strong></div>
     <ped>
-      <button id="sbbtn" sound="1">GET OUT</button>
-      <script>
+    <button id="sbbtn" sound="1">GET OUT</button>
+    <script>
     const button = document.getElementById('sbbtn');
     if (button) { button.addEventListener('click', (event) => { 
         const id = event.currentTarget.getAttribute('sound'); 
         new Audio(`/sounds/${id}.mp3`).play(); 
       });
     }
-</script>
+    </script>
   </body>
 </html>
