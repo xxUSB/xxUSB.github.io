@@ -24,12 +24,40 @@
         display: block;
         padding: 20px 0px;
       }
+
+      #sbbtn {
+        background-color: #3333ff;
+        color: #ffffff;
+        width: 75px;
+        height: 75px;
+        border-radius: 70px;
+        border: 2.5px solid #6666ff;
+        box-shadow: 6px 6px 15px #00000044;
+        transition: all 0.2s ease;
+      }
+
+      #sbbtn:hover {
+        background-color: #1111dd;
+        color: #ffffff;
+        width: 75px;
+        height: 75px;
+        border-radius: 70px;
+        border: 2.5px solid #4444dd;
+        box-shadow: 3px 3px 15px #00000088;
+        transform: translateY(2.5px);
+      }
+
+      app {
+        margin: 20px;
+      }
     </style>
   </head>
   <body>
     <div class="nav-bar"><strong> USB </strong></div>
     <ped>
-    <button id="sbbtn" sound="1">GET OUT</button>
+    <app>
+        <button id="sbbtn" sound="1">GET OUT</button>
+    </app>
     <script>
     const button = document.getElementById('sbbtn');
     if (button) { button.addEventListener('click', (event) => { 
